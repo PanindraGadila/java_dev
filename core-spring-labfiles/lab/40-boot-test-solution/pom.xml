@@ -48,12 +48,12 @@
         </dependency>
 
           <!-- Automatic application restart -->
-          <dependency>
-               <groupId>org.springframework.boot</groupId>
-               <artifactId>spring-boot-devtools</artifactId>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
-          </dependency>
+        </dependency>
     </dependencies>
 
     <build>
