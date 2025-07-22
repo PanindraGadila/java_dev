@@ -1,0 +1,70 @@
+main points:
+
+
+1) contructoe injection vs feild inject(@autowired)
+2) @configuration witrh @bean is better than @component and @beeans.(also remember the singles ton object creation and referances)
+3) spring creates the implimneation class and its object for inject automatically beind th scenes
+4) Evn varibable injuction form app.propertieres by spring into datasopurce -- thisis called external properties
+
+example @configuration 
+	class data{
+	@bean
+	public DataSource datasource(properties env){
+		env.db.driver.url;
+	}
+
+
+
+5) @profile is grouping the beans in context and activating to use in our spring.(no profiles are always included in the spring application context. but if profiled one are not activated befire run() methid call then they are not accessed in the application context
+6) bean names in context are just the names of the method it has.
+7) spring expression language - SPEL(@value(beanName.getSomeValue) key keyVar)--- so in this the expression will execute and assign those value in the keyVar variable.
+
+
+compoenent scanning -
+8) @configuraiton
+public class pani{
+	@Autowirewd(default==false)
+	public void setter(dependency variableName){
+}
+}
+
+9) constructor injection vs setter injection? spring doesn't care about this.
+setters = mutable
+constructrs = immutable
+-- better to use the constructor over setter for better confusion
+
+ 10) component Ambiguity - 
+
+example - two @ compoenents classes implementing same interface and another @configuration class or #component class is taking@autowired of class type interface.(so in context we have 2 beans with same type, which one spring will consider? ---use @Qualifier("implementing className one of those two "))
+
+
+
+11) @autowried can be used to methods(setters, constructors) and variables/members/referanes from where the dependemcy injection will take care of rest. 
+12) @Lazy to delay the initialization of bean.
+13) Annotation style configuration(@compoenet, @service, @repository, @controllers) and java style condifuration(@configuration, @Bean -- which are also annotation but are more java centric and explicit mentioning)
+
+
+
+
+
+(660) 238-8089
+14) 
+
+
+
+{"even", "odd"}[12%2&%12/5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@springBootTest(WebEnvironment = SpringBoottest.WebEnvironment.Random_port)
