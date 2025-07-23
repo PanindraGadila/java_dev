@@ -24,7 +24,7 @@ class AccountServiceMethodSecurityTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    @Disabled
+//    @Disabled
     void getAuthoritiesForUser_should_return_403_for_user() {
 
         ResponseEntity<String> responseEntity = restTemplate.withBasicAuth("user", "user")
@@ -34,7 +34,7 @@ class AccountServiceMethodSecurityTest {
     }
 
     @Test
-    @Disabled
+//    @Disabled
     void getAuthoritiesForUser_should_return_authorities_for_admin() {
 
         String[] authorities = restTemplate.withBasicAuth("admin", "admin")
